@@ -1,0 +1,20 @@
+
+- HOMEPAGE
+
+- FAZER LOGIN E CRIAR CONTA (USUÁRIO E AUTENTICAÇÃO)
+    - EMAIL
+    - USERNAME
+    - SENHA
+    - FILMES/SÉRIES VISTOS
+    - EDITAR PERFIL
+
+- FILMES/SÉRIES
+       - THUMB
+       - TÍTULO
+       - DESCRIÇÃO
+       - CATEGORIA
+       - EPISÓDIOS
+            - videos (link do video)
+            - titulos
+
+- BARRA DE PESQUISA

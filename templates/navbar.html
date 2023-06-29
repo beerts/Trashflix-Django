@@ -1,0 +1,50 @@
+{% load static %}
+
+<nav class="w-full flex justify-between items-center py-6 px-4 fixed z-50">
+    <div class="w-9/12">
+        <a href="/">
+            <img class="w-3/12" src="{% static 'images/trashflix.jpg' %}">
+
+
+        </a>
+    </div>
+    <div class="w-6/12 flex flex-nowrap justify-end">
+         {% if user.is_authenticated %}
+        <div class="mr-2">
+            <form method="get" action="{% url 'filme:pesquisafilme' %}">
+                <input type="text" class="py-1 px-2 rounded-md text-black" name="query" placeholder="Procurar...">
+                <input type="submit" value="" placeholder="Pesquisar">
+            </form>
+        </div>
+        {% endif %}
+        {% if user.is_authenticated %}
+        <div class="mr-2">
+            <a href="{% url 'filme:logout' %}">
+                <button class="hover:bg-green-800 bg-green-600 text-white py-1 px-3 rounded-md">
+                    Sair
+                </button>
+            </a>
+        </div>
+        {% else %}
+
+        <div class="mr-2">
+
+            <a href="{% url 'filme:login' %}">
+                <button class=" hover:bg-green-800 bg-green-600 text-white py-1 px-3 rounded-md">
+                    Entrar
+                </button>
+            </a>
+        </div>
+        {% endif %}
+
+        {% if user.is_authenticated %}
+        <div class="mr-2">
+            <a href="{% url 'filme:editarperfil' user.pk %}">
+                <button class="bg-green-600 text-white py-1 px-3 rounded-md hover:bg-green-800">
+                    Editar perfil
+                </button>
+            </a>
+        </div>
+    </div>
+    {% endif %}
+</nav>
