@@ -38,8 +38,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'filme',
-    'crispy_forms',
-    'crispy_bootstrap5',
 ]
 
 MIDDLEWARE = [
@@ -68,7 +66,6 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
                 'filme.novos_context.lista_filmes_recentes',
                 'filme.novos_context.lista_filmes_alta'
-
             ],
         },
     },
